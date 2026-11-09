@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLABLA FEST 2026 - Tiket</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<video class="bg-video" autoplay muted loop playsinline>
+    <source src="img/konser.mp4" type="video/mp4">
+</video>
+
+<header>
+    <nav>
+        <h2>BLABLA FEST</h2>
+
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="lineup.html">Line Up</a>
+            <a href="tiket.html">Tiket</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+</header>
+
+<section class="section">
+
+    <h1>PILIH TIKET KAMU</h1>
+
+    <p>Satu tiket berlaku untuk seluruh penampil.</p>
+
+    <div class="ticket-list">
+
+        <div class="ticket-card">
+
+            <h2>FESTIVAL</h2>
+
+            <h3>Rp150.000</h3>
+
+            <p>Akses area festival.</p>
+
+            <p>Menikmati seluruh penampil.</p>
+
+            <button class="btn"
+                onclick="pilihTiket('Festival', 150000)">
+                Pilih Tiket
+            </button>
+
+        </div>
+
+        <div class="ticket-card">
+
+            <h2>VIP</h2>
+
+            <h3>Rp250.000</h3>
+
+            <p>Akses area VIP.</p>
+
+            <p>Menikmati seluruh penampil.</p>
+
+            <button class="btn"
+                onclick="pilihTiket('VIP', 250000)">
+                Pilih Tiket
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<footer>
+    <p>&copy; 2026 BLABLA FEST. All Rights Reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

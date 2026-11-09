@@ -1,0 +1,500 @@
+/* =========================
+   RESET DASAR
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: white;
+    background: #211039;
+    min-height: 100vh;
+    position: relative;
+    isolation: isolate;
+}
+
+/* =========================
+   VIDEO BACKGROUND
+========================= */
+
+.bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+
+    z-index: -2;
+    pointer-events: none;
+}
+
+/* Lapisan gelap ungu dan biru */
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+
+    background: linear-gradient(
+        135deg,
+        rgba(35, 10, 75, 0.78),
+        rgba(25, 25, 80, 0.75),
+        rgba(85, 30, 130, 0.78)
+    );
+
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+header {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.94);
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.15);
+
+    position: relative;
+    z-index: 10;
+}
+
+nav {
+    max-width: 1200px;
+    margin: auto;
+    padding: 18px 30px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+nav h2 {
+    color: #7136C9;
+    font-size: 25px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #302342;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #7136C9;
+}
+
+/* =========================
+   SECTION / KONTEN
+========================= */
+
+.section {
+    max-width: 1150px;
+    width: calc(100% - 40px);
+
+    margin: 55px auto;
+    padding: 45px 35px;
+
+    background: rgba(35, 20, 65, 0.55);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    border-radius: 25px;
+
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.18);
+
+    text-align: center;
+}
+
+.section h1 {
+    color: #FFDF45;
+    font-size: 34px;
+    margin-bottom: 15px;
+}
+
+.section h2 {
+    color: #FFDF45;
+    margin-bottom: 15px;
+}
+
+.section p {
+    color: white;
+    line-height: 1.7;
+    margin-bottom: 12px;
+}
+
+/* =========================
+   HOME
+========================= */
+
+.home-section {
+    min-height: 450px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-section h1 {
+    font-size: 55px;
+    text-shadow: 0 3px 15px rgba(0, 0, 0, 0.4);
+}
+
+.home-section h2 {
+    font-size: 23px;
+}
+
+/* =========================
+   TOMBOL
+========================= */
+
+.btn {
+    display: inline-block;
+
+    background: #FFDF45;
+    color: #35245A;
+
+    padding: 13px 30px;
+    margin-top: 15px;
+
+    border: none;
+    border-radius: 30px;
+
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: none;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #3478ED;
+    color: white;
+    transform: translateY(-3px);
+}
+
+/* =========================
+   LINE UP ARTIS
+========================= */
+
+.artist-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 22px;
+    margin-top: 35px;
+}
+
+.artist-card {
+    background: white;
+    padding: 12px;
+
+    border-radius: 18px;
+    overflow: hidden;
+
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.15);
+    transition: 0.3s;
+}
+
+.artist-card:hover {
+    transform: translateY(-7px);
+}
+
+.artist-card img {
+    width: 100%;
+    height: 190px;
+
+    object-fit: cover;
+    object-position: center;
+
+    display: block;
+    border-radius: 12px;
+}
+
+.artist-card h3 {
+    color: #7136C9;
+    margin-top: 12px;
+    font-size: 17px;
+}
+
+/* =========================
+   TIKET
+========================= */
+
+.ticket-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+    margin-top: 35px;
+}
+
+.ticket-card {
+    background: linear-gradient(
+        145deg,
+        #FFFFFF,
+        #EEE8FF
+    );
+
+    padding: 35px 25px;
+
+    border: 2px solid #7136C9;
+    border-radius: 22px;
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    transition: 0.3s;
+}
+
+.ticket-card:hover {
+    transform: translateY(-6px);
+}
+
+.ticket-card h2 {
+    color: #302342;
+    font-size: 27px;
+}
+
+.ticket-card h3 {
+    color: #7136C9;
+    font-size: 28px;
+    margin: 12px 0;
+}
+
+.ticket-card p {
+    color: #55516A;
+}
+
+/* =========================
+   FORM BOOKING & CONTACT
+========================= */
+
+form {
+    max-width: 550px;
+    margin: 25px auto 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    text-align: left;
+}
+
+form label {
+    color: white;
+    font-weight: bold;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 15px;
+
+    border: 1px solid #D6C5F5;
+    border-radius: 12px;
+
+    background: white;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+
+    outline: none;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #7136C9;
+    box-shadow: 0 0 8px rgba(113, 54, 201, 0.2);
+}
+
+textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+
+form .btn {
+    align-self: center;
+}
+
+/* =========================
+   SUMMARY / E-TICKET
+========================= */
+
+.section .ticket-card {
+    max-width: 600px;
+    margin: 25px auto;
+    text-align: center;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    width: 100%;
+
+    background: linear-gradient(
+        90deg,
+        #7136C9,
+        #5B20C5,
+        #3478ED
+    );
+
+    color: white;
+    text-align: center;
+
+    padding: 25px 15px;
+    margin-top: 50px;
+}
+
+footer p {
+    color: white;
+}
+
+/* =========================
+   RESPONSIVE TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+    .artist-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .artist-card img {
+        height: 180px;
+    }
+
+    .home-section h1 {
+        font-size: 42px;
+    }
+}
+
+/* =========================
+   RESPONSIVE HP
+========================= */
+
+@media (max-width: 600px) {
+
+    nav {
+        flex-direction: column;
+        padding: 18px;
+    }
+
+    .nav-links {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .section {
+        width: calc(100% - 24px);
+        margin: 25px auto;
+        padding: 30px 18px;
+    }
+
+    .section h1 {
+        font-size: 25px;
+    }
+
+    .home-section {
+        min-height: 400px;
+    }
+
+    .home-section h1 {
+        font-size: 32px;
+    }
+
+    .home-section h2 {
+        font-size: 18px;
+    }
+
+    .artist-list {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 13px;
+    }
+
+    .artist-card {
+        padding: 8px;
+    }
+
+    .artist-card img {
+        height: 135px;
+    }
+
+    .artist-card h3 {
+        font-size: 14px;
+    }
+
+    .ticket-list {
+        grid-template-columns: 1fr;
+    }
+
+    .ticket-card {
+        padding: 28px 18px;
+    }
+}
+
+/* BACKGROUND HOME BLABLA FEST */
+
+.home-section {
+    background:
+        repeating-linear-gradient(
+            -45deg,
+            rgba(113, 54, 201, 0.95) 0px,
+            rgba(113, 54, 201, 0.95) 25px,
+            rgba(52, 120, 237, 0.95) 25px,
+            rgba(52, 120, 237, 0.95) 50px
+        );
+
+    border: 2px solid rgba(255, 255, 255, 0.25);
+    border-radius: 30px;
+
+    box-shadow:
+        0 10px 35px rgba(0, 0, 0, 0.3),
+        0 0 25px rgba(113, 54, 201, 0.4);
+
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Judul BLABLA FEST */
+
+.home-section h1 {
+    color: #FFDF45;
+    text-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Subjudul */
+
+.home-section h2 {
+    color: white;
+}
+
+/* Informasi acara */
+
+.home-section p {
+    color: white;
+}
